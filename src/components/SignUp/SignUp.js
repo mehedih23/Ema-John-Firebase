@@ -38,7 +38,9 @@ const SignUp = () => {
         else {
             setError('')
             createUserWithEmailAndPassword(email, password)
-            navigate('/login')
+                .then(() => {
+                    navigate('/login')
+                })
         }
     }
 
